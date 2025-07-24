@@ -1,0 +1,244 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D0D0D;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 0 20px;
+}
+
+.header {
+    color: #D9D9D9;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.navbar .brand {
+    margin-right: auto;
+    color: #D9D9D9;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+}
+
+.navbar .brand a {
+    color: #D9D9D9;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #D9D9D9;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.image-holder, img {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    float: left;
+}
+
+.description {
+    color: #D9D9D9;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.about-content {
+    color: #D9D9D9;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 0 0 250px;
+    min-width: 200px;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    float: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.download-button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .navbar ul {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .navbar ul li {
+        margin: 0 10px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 15px 20px;
+    }
+    
+    .about-image {
+        flex: none;
+        align-self: center;
+        max-width: 300px;
+    }
+    
+    .description {
+        text-align: left;
+    }
+    
+    .head {
+        height: auto;
+        min-height: 40vh;
+        padding: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar ul li {
+        margin: 0 5px;
+    }
+    
+    .about-content {
+        padding: 10px 15px;
+        gap: 1rem;
+    }
+    
+    .about-image {
+        max-width: 250px;
+    }
+    
+    .head {
+        padding: 15px;
+        height: auto;
+        min-height: 35vh;
+    }
+    
+    .download-button {
+        padding: 10px 20px;
+        width: 90%;
+        max-width: 200px;
+    }
+}
+
+.hello {
+    color: #D9D9D9;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 8vw, 5rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.hello:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 1200px) {
+    .about-content {
+        max-width: 1200px;
+        padding: 40px;
+    }
+    
+    .navbar {
+        padding: 0 40px;
+    }
+}
