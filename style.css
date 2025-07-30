@@ -87,22 +87,11 @@ body {
     margin-right: auto;
 }
 
-.navbar .brand {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    flex-shrink: 0;
-    transition: color 0.3s ease;
-}
-
-.navbar .brand a {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    transition: color 0.3s ease;
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -125,10 +114,28 @@ body {
     font-size: 0.9rem;
     color: var(--text-secondary);
     transition: all 0.3s ease;
-    margin-left: 20px;
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-shrink: 0;
+}
+
+.navbar .brand {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .brand a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    transition: color 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -314,9 +321,15 @@ footer p {
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         padding: 15px;
         margin-bottom: 15px;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
     }
     
     .navbar ul {
@@ -333,8 +346,6 @@ footer p {
     }
     
     .theme-toggle {
-        margin-left: 0;
-        margin-top: 10px;
         padding: 6px 12px;
         font-size: 0.8rem;
     }
@@ -401,6 +412,11 @@ footer p {
     .navbar {
         padding: 10px;
         margin-bottom: 10px;
+        gap: 12px;
+    }
+    
+    .nav-content {
+        gap: 12px;
     }
     
     .navbar ul li {
@@ -420,8 +436,6 @@ footer p {
     }
     
     .theme-toggle {
-        margin-left: 0;
-        margin-top: 8px;
         padding: 5px 10px;
         font-size: 0.75rem;
     }
